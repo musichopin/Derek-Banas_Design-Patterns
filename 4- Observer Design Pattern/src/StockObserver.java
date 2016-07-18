@@ -18,8 +18,8 @@ public class StockObserver implements Observer {
 	private Subject stockGrabber;
 	
 	// reference is passed to the current StockGrabber object (polymorphism)
-	public StockObserver(Subject stockGrabber){ 
-		// poly: Subject stockGrabber=new StockGrabber();
+	public StockObserver(Subject stockGrabber){
+		// ***poly: Subject stockGrabber=new StockGrabber();***
 		
 		// Store the reference to the stockGrabber object so
 		// I can make calls to its methods
@@ -34,10 +34,11 @@ public class StockObserver implements Observer {
 		
 		System.out.println("New Observer " + this.observerID);
 		
-		// Add the observer that we just created to the Subjects ArrayList
-		this.stockGrabber.register(this); // calls the register method of StockGrabber subclass (poly)
-//		this: reference variable of this StockObserver object 
-// argument yollanýnca polymorphism olur: Observer newObserver=this;
+		// Add/register the new observer that we just created to the Subjects ArrayList
+		this.stockGrabber.register(this); 
+		// ***calls the register method of StockGrabber subclass (poly)***
+		//	this: reference variable of this StockObserver object 
+		// argument yollanýnca polymorphism olur: Observer newObserver=this;
 		
 	}
 	

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class EnemyShipTesting {
 
 	public static void main(String[] args){
+//		factory - product sýrasý önemli
 		
 		// Create the factory object
 		EnemyShipFactory shipFactory = new EnemyShipFactory();
@@ -18,9 +19,10 @@ public class EnemyShipTesting {
 		if (userInput.hasNextLine()){ // tests the existence of input 
 			
 			String typeOfShip = userInput.nextLine(); // stores input
-		
+			
+//			***main metodun (order yeri) içerisinde factory çaðýrýlýyor ve product return ediliyor***
 			theEnemy = shipFactory.makeEnemyShip(typeOfShip); // returns and stores object
-//			polymorphism
+//			***Poly ile sub class larýn 3'ünü de seçme opsiyonumuz olur***
 			
 			if(theEnemy != null){
 				
@@ -88,7 +90,7 @@ public class EnemyShipTesting {
 	}
 	
 	// Executes methods of the super class
-	
+//	***Poly ile sub class larýn 3'ünü de seçme opsiyonumuz olur***
 	public static void doStuffEnemy(EnemyShip anEnemyShip){
 		// parameterda polymorphism
 		

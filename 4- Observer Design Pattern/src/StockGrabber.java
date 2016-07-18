@@ -21,9 +21,9 @@ public class StockGrabber implements Subject{
 		// Adds a new observer to the ArrayList
 		// added observers are notified of stock prices
 		observers.add(newObserver); 
-		// !add metodu Observer int'e ait deðil, Observer'dan oluþan arrayliste ait
-		// bu arrayliste Observer'ýn subclassý olan StockObserver eklendi
-// (newObserver ref var points to StockObserver subclass (polymorphism))
+//		***PATTERNE DÝKKAT: superclass Observer'dan oluþan
+//		arrayliste Observer'ýn subclassý olan StockObserver eklendi.
+// (newObserver ref var points to StockObserver subclass (polymorphism))***
 
 	}
 
@@ -38,7 +38,7 @@ public class StockGrabber implements Subject{
 		
 		// Removes observer from the ArrayList
 		// removed observer are not notified 
-		observers.remove(observerIndex); // remove metodu Observer classa ait deðil
+		observers.remove(observerIndex); // remove metodu Observer int e ait deðil
 //		remove method belongs to arraylist class
 		
 	}
@@ -49,7 +49,9 @@ public class StockGrabber implements Subject{
 		// price changes
 		// Observer: type, observer: temporary holder, observers: ref to arraylist
 		for(Observer observer : observers){
-			// arrayliste Observer'ýn subclassý olan StockObserver eklenmiþti
+			// ***PATTERN E DÝKKAT: 
+			// poly: arrayliste Observer'ýn subclassý olan StockObserver eklenmiþti
+			// ve subclass ýn metoduna ulaþtýk***
 			observer.update(ibmPrice, aaplPrice, googPrice);
 			// calls the update method of the subclass, StockObserver
 		}

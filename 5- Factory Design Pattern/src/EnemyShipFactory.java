@@ -11,7 +11,7 @@ public class EnemyShipFactory{
 	// are willing to give up subclassing it
 	
 	public EnemyShip makeEnemyShip(String newShipType){
-//		returns of type EnemyShip
+//		***poly: returns of type EnemyShip***
 		
 		EnemyShip newShip = null;
 		

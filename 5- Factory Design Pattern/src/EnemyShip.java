@@ -1,5 +1,5 @@
 public abstract class EnemyShip {
-	
+//	product
 	private String name;
 	private double speed;
 	private double directionX;
