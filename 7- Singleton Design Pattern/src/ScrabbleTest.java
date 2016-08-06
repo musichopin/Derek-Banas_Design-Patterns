@@ -7,7 +7,14 @@ public class ScrabbleTest {
 		// creates a new instance of Singleton
 		
 		Singleton newInstance = Singleton.getInstance();
+//		Singleton newInstance1 = new Singleton();
+//		Class newInstance2 = Singleton.class;
 		
+//		System.out.println(Singleton.class.getName());
+//		System.out.println(newInstance.getClass().getName());
+//		System.out.println("1st Instance ID: " + System.identityHashCode(newInstance1));
+//		System.out.println("2nd Instance ID: " + System.identityHashCode(newInstance2));
+
 		// Get unique id for instance object
 //		makes us understand whether we are dealing with same object		
 		System.out.println("1st Instance ID: " + System.identityHashCode(newInstance));

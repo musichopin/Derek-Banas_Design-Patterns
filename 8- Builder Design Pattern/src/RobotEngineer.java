@@ -36,3 +36,11 @@ public class RobotEngineer {
 	}
 	
 }
+
+/*
+Robot Built
+Robot Head Type: Tin Head
+Robot Torso Type: Tin Torso
+Robot Arm Type: Blowtorch Arms
+Robot Leg Type: Rollar Skates
+*/

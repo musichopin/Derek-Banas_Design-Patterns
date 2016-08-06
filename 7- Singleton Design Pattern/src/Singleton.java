@@ -65,6 +65,7 @@ public class Singleton {
 //			this is going to force it to be a synchronized method until the first object is created,
 //			and then it is no longer going to be considered as synchronized 
 			synchronized(Singleton.class){
+//			synchronized(new Singleton()){ yazýnca sonuç deðiþmedi
 				
 //				buradan aþaðýdaki return'e kadar olan kýsým basic Singleton Pattern'dir.
 				if(firstInstance == null) {
