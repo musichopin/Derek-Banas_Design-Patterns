@@ -39,12 +39,14 @@ public class CalculatorView extends JFrame{
 		
 	}
 	
+//	**triggered when event (clicking) is done**
 	public int getFirstNumber(){
 		
 		return Integer.parseInt(firstNumber.getText());
 		
 	}
 	
+//	**triggered when event (clicking) is done**
 	public int getSecondNumber(){
 		
 		return Integer.parseInt(secondNumber.getText());
@@ -58,6 +60,7 @@ public class CalculatorView extends JFrame{
 		
 	}
 	
+//	**triggered when event (clicking) is done**
 	public void setCalcSolution(int solution){
 		
 //		*we gotta convert to string*
@@ -65,22 +68,23 @@ public class CalculatorView extends JFrame{
 		
 	}
 	
-	// **If the calculateButton is clicked execute a method
-	// in the Controller named actionPerformed**
+	// Open a popup that contains the error message passed
+//	**triggered when event (clicking) is done and error found**
+	void displayErrorMessage(String errorMessage){
+		
+		JOptionPane.showMessageDialog(this, errorMessage);
+		
+	}
 	
+	
+	// ***If the calculateButton is clicked execute a method
+	// in the Controller named actionPerformed.
+	//	(this statement prepares the event handling)***
 	void addCalculateListener(ActionListener listenForCalcButton){
 //		**alt: addCalculateListener(CalculatorController.CalculateListener listenForCalcButton)**
 		
 		calculateButton.addActionListener(listenForCalcButton);
 //		**calculateButton private olduðu için calculatorview classý dýþýnda kullanýlamýyor**
-	}
-	
-	// Open a popup that contains the error message passed
-	
-	void displayErrorMessage(String errorMessage){
-		
-		JOptionPane.showMessageDialog(this, errorMessage);
-		
 	}
 	
 }

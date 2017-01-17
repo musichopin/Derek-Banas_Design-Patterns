@@ -9,12 +9,14 @@ public class CalculatorModel {
 	
 	private int calculationValue;
 	
+//	**triggered by controller class when event (clicking) is done**
 	public void addTwoNumbers(int firstNumber, int secondNumber){
 		
 		calculationValue = firstNumber + secondNumber;
 		
 	}
 	
+//	**triggered by controller class when event (clicking) is done**
 	public int getCalculationValue(){
 		
 		return calculationValue;

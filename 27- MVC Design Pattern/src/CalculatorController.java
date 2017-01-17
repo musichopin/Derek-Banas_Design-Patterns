@@ -13,13 +13,13 @@ public class CalculatorController {
 		this.theView = theView;
 		this.theModel = theModel;
 		
-		// Tell the View that when ever the calculate button
-		// is clicked to execute the actionPerformed method
-		// in the CalculateListener inner class
-		
+		// ***Tell the View that when ever the calculate button
+		// is clicked execute the actionPerformed method
+		// in the CalculateListener inner class***
 		this.theView.addCalculateListener(new CalculateListener());
 	}
 	
+//	***triggered when event (clicking) is done***
 	class CalculateListener implements ActionListener{
 
 		public void actionPerformed(ActionEvent e) {
@@ -31,7 +31,7 @@ public class CalculatorController {
 			// properly entered
 			
 			try{
-				
+//				***view get -> model set -> model get -> view set***
 				firstNumber = theView.getFirstNumber();
 				secondNumber = theView.getSecondNumber();
 				
